@@ -22,6 +22,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B28-Pz-hJF">
                                         <rect key="frame" x="0.0" y="0.0" width="408" height="154"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="154" id="rgn-4K-8Bo"/>
+                                        </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kEl-7B-ZKT">
                                         <rect key="frame" x="0.0" y="170" width="408" height="30"/>
@@ -29,7 +32,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbA-4x-S5t">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="51" id="hI1-8a-wbg"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="51" id="Sew-B5-oyC"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -106,14 +109,9 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="VDq-LN-rZs" firstAttribute="leading" secondItem="rhk-PK-E0G" secondAttribute="leading" constant="5" id="Kh9-bs-czI"/>
-                                    <constraint firstAttribute="trailing" secondItem="hSm-7b-dam" secondAttribute="trailing" constant="5" id="RPf-uX-fIr"/>
+                                    <constraint firstItem="kEl-7B-ZKT" firstAttribute="top" secondItem="B28-Pz-hJF" secondAttribute="bottom" constant="16" id="772-Eu-Oqe"/>
                                     <constraint firstAttribute="width" constant="408" id="bLk-O4-ZET"/>
-                                    <constraint firstItem="kEl-7B-ZKT" firstAttribute="leading" secondItem="rhk-PK-E0G" secondAttribute="leading" constant="5" id="fh2-fh-Rwm"/>
                                     <constraint firstAttribute="height" constant="292" id="hAB-t9-0qI"/>
-                                    <constraint firstAttribute="trailing" secondItem="kEl-7B-ZKT" secondAttribute="trailing" constant="5" id="kQI-oY-hNZ"/>
-                                    <constraint firstItem="hSm-7b-dam" firstAttribute="leading" secondItem="rhk-PK-E0G" secondAttribute="leading" constant="5" id="tEy-rw-Yfy"/>
-                                    <constraint firstAttribute="trailing" secondItem="VDq-LN-rZs" secondAttribute="trailing" constant="5" id="tmq-oS-pj5"/>
                                 </constraints>
                             </stackView>
                         </subviews>
