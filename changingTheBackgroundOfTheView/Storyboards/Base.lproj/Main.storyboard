@@ -1,18 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ltg-Zy-4Ev">
     <device id="retina6_9" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Color Screen View Controller-->
+        <scene sceneID="vMl-fe-YTl">
+            <objects>
+                <viewController storyboardIdentifier="TheGradientViewController" id="3G2-o5-ffZ" customClass="ColorScreenViewController" customModule="changingTheBackgroundOfTheView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="ColorScreen" id="RTV-cG-kV9">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yRi-fr-FjE"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Nz-qe-Iug">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="aaQ-FH-cLd">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="showGradient" modalPresentationStyle="fullScreen" id="YR0-qL-zBG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FFX-lU-1bG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="123" y="-3"/>
+        </scene>
+        <!--The Gradient View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="changingTheBackgroundOfTheView" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="TheGradientViewController" customModule="changingTheBackgroundOfTheView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="right" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -48,9 +70,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.32000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rDc-H3-CiG">
-                                                <rect key="frame" x="105" y="0.0" width="305" height="31"/>
+                                                <rect key="frame" x="105" y="0.0" width="252" height="31"/>
                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                             </slider>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Os-0x-FSj">
+                                                <rect key="frame" x="363" y="0.0" width="45" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="gMF-qF-j71"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad"/>
+                                            </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VDq-LN-rZs">
@@ -75,9 +107,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="CYH-JF-uR3">
-                                                <rect key="frame" x="105" y="0.0" width="305" height="31"/>
+                                                <rect key="frame" x="105" y="0.0" width="252" height="31"/>
                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                             </slider>
+                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3yd-6E-If0">
+                                                <rect key="frame" x="363" y="0.0" width="45" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="e8L-9p-0YQ"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad"/>
+                                            </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hSm-7b-dam">
@@ -102,9 +144,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MCY-my-v8c">
-                                                <rect key="frame" x="105" y="0.0" width="305" height="31"/>
+                                                <rect key="frame" x="105" y="0.0" width="252" height="31"/>
                                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                             </slider>
+                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="509-hj-3WE">
+                                                <rect key="frame" x="363" y="0.0" width="45" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="RFN-NY-J69"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad"/>
+                                            </textField>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -114,14 +166,29 @@
                                     <constraint firstAttribute="height" constant="292" id="hAB-t9-0qI"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4j-Na-KJz">
+                                <rect key="frame" x="169" y="789.33333333333337" width="102" height="54.666666666666629"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="34"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonDone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9m2-mh-2cA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                         <constraints>
+                            <constraint firstItem="N4j-Na-KJz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8Ha-15-CIl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="N4j-Na-KJz" secondAttribute="bottom" constant="78" id="HHG-C1-Uim"/>
                             <constraint firstItem="rhk-PK-E0G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="SV3-RB-pvA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="N4j-Na-KJz" secondAttribute="trailing" id="UL9-Fe-9yF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rhk-PK-E0G" secondAttribute="trailing" constant="16" id="f6L-mz-d6t"/>
                             <constraint firstItem="rhk-PK-E0G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="ksA-kd-UV8"/>
                             <constraint firstItem="rhk-PK-E0G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oYA-iH-rY8"/>
+                            <constraint firstItem="N4j-Na-KJz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="teo-fG-OfB"/>
                         </constraints>
                     </view>
                     <connections>
@@ -132,14 +199,36 @@
                         <outlet property="sliderValueBlue" destination="gNB-qE-X0B" id="VHb-kf-o3U"/>
                         <outlet property="sliderValueGreen" destination="jAN-fl-H4p" id="EjS-w5-bkn"/>
                         <outlet property="sliderValueRed" destination="Ppp-SI-xtE" id="4HR-MF-lT7"/>
+                        <outlet property="textFieldBlue" destination="509-hj-3WE" id="Dea-IB-KUq"/>
+                        <outlet property="textFieldGreen" destination="3yd-6E-If0" id="NIM-ZB-h7A"/>
+                        <outlet property="textFieldRed" destination="8Os-0x-FSj" id="QGm-dH-8n1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46.363636363636367" y="-2.510460251046025"/>
+            <point key="canvasLocation" x="938.18181818181824" y="-2.510460251046025"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fzM-wM-iZB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ltg-Zy-4Ev" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="g8U-gG-R27">
+                        <rect key="frame" x="0.0" y="124" width="440" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3G2-o5-ffZ" kind="relationship" relationship="rootViewController" id="pyM-y8-6g1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UFX-bS-2hd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-657" y="-3"/>
         </scene>
     </scenes>
     <resources>
+        <image name="square.and.pencil" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

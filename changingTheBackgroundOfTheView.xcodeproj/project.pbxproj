@@ -19,7 +19,7 @@
 		C2EA62EA2D88F8D700E5F566 /* Exceptions for "changingTheBackgroundOfTheView" folder in "changingTheBackgroundOfTheView" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				App/Info.plist,
 			);
 			target = C2EA62D72D88F8D700E5F566 /* changingTheBackgroundOfTheView */;
 		};
@@ -153,7 +153,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = changingTheBackgroundOfTheView/Info.plist;
+				INFOPLIST_FILE = changingTheBackgroundOfTheView/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -184,7 +184,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = changingTheBackgroundOfTheView/Info.plist;
+				INFOPLIST_FILE = changingTheBackgroundOfTheView/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
